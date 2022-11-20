@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+}
+body{
+    
+        background: url(./imagenesdiseño/54336.png);
+        background-size: 100%;
+    
+}
+.post-list{
+    
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 15px;
+   
+} /*columnas*/
+.content{
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    grid-gap: 21px;
+    max-width: 1000px;
+    margin: auto;
+}/*imagenes*/
+.post-img-1{
+    background: url(./imagenfar/acetaminofen.jpg);
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    transition: .2s;
+}
+.post-img-2{
+    background: url(./imagenfar/dolex.webp);
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    transition: .2s;
+}
+.post-img-3{
+    background: url(./imagenfar/naproxeno.jpg);
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    transition: .2s;
+}/*
+.post-img-4{
+    background: url(./imagenfar/naproxeno.jpg);
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    transition: .2s;
+}/*personalizar los articulos*/
+.post{
+    box-shadow: 0 1px 6px 1px rgba(0, 0, 0, .1);
+    overflow: hidden;
+    transition: .2s;
+}/*ayuda a subir el contenedor*/
+.post:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 1px 14px 2px rgba(0, 0, 0, .15);
+}/*aca esta la imagen*/
+.post-header{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    cursor: pointer;
+}
+/*para hacer efecto en las imagenes, para que se vea que se expanden */
+.post:hover .post-img-1,
+.post:hover .post-img-2,
+.post:hover .post-img-3,
+.post:hover .post-img-4{
+    transform: scale(1.1);
+}/*¨personaliza la caja de texto*/
+.post-body{
+    padding: 15px;
+    text-align: center;
+}
+/*personalizar fecha con el margim botton se le puede dar mas espaciado*/
+.post-body span{
+    display: inline-block;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.post-body h2{
+    margin-bottom: 15px;
+}/*ayuda a separar la lineas de texto y darles margenes*/
+.post-body p{
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+/**personalizar los links*/
+.post-body .post-link{
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    background: #2b6ebb;
+    color: #fff;
+    width: 50%;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 1px 2px 6px 1px rgba(0, 0, 0, 1);
+    transition: .2s;
+}/*darle color a el linnk*/
+.post-body .post-link:hover{
+    background: #3378c7;
+    box-shadow: 1px 2px 6px 1px rgba(0, 0, 0, 2);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 840px){
+    .content{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 600px){
+    .content{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
